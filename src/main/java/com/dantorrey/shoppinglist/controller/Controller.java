@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collection;
-
-@RestController("/items")
+@RestController
 public class Controller {
 
     private ItemRepo itemRepo;
@@ -18,10 +16,11 @@ public class Controller {
         this.itemRepo = itemRepo;
     }
 
-//    @GetMapping("/all")
-//    public Collection<Item> all() {
-//
-//        return itemRepo.findAll();
-//    }
+    @GetMapping("allItems")
+    public Iterable<Item> all() {
+
+        return itemRepo.findAll();
+    }
+
 
 }
