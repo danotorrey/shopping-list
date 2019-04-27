@@ -7,7 +7,7 @@ import java.util.List;
 @Entity
 public class ItemList extends BaseEntity {
 
-    @OneToMany
+    @OneToMany(mappedBy = "itemList")
     private List<Item> items;
 
     public List<Item> getItems() {

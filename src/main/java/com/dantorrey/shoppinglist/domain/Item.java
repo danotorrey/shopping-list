@@ -3,12 +3,16 @@ package com.dantorrey.shoppinglist.domain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Item extends BaseEntity {
 
     private String name;
     private Integer quantity;
+
+    @ManyToOne
+    private ItemList itemList;
 
     public Item() {
     }
@@ -40,5 +44,13 @@ public class Item extends BaseEntity {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public ItemList getItemList() {
+        return itemList;
+    }
+
+    public void setItemList(ItemList itemList) {
+        this.itemList = itemList;
     }
 }
