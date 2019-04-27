@@ -19,6 +19,10 @@ public class ShoppingListApplication {
 		SpringApplication.run(ShoppingListApplication.class, args);
 	}
 
+    /**
+     * Allow web requests from the web interface.
+     * @return
+     */
 	@Bean
 	public FilterRegistrationBean<CorsFilter> simpleCorsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
