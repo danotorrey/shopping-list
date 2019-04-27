@@ -8,7 +8,7 @@ import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.util.List;
 
-@RepositoryRestResource(collectionResourceRel = "item", path = "item")
+@RepositoryRestResource(collectionResourceRel = "itemList", path = "itemList")
 public interface ItemListRepo extends PagingAndSortingRepository<ItemList, Long> {
 
     @RestResource(path="byName")

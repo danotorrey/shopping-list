@@ -16,7 +16,7 @@ public class Controller {
         this.itemRepo = itemRepo;
     }
 
-    @GetMapping("allItems")
+    @GetMapping(value = "allItems", produces = "application/json")
     public Iterable<Item> all() {
 
         return itemRepo.findAll();
